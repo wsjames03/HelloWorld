@@ -2,9 +2,13 @@
 // For more information see https://aka.ms/fsharp-console-apps
 open System
 
+let debug = printfn "reach here %d"
+debug 1
+
 //Define a function to construct a message to print
 let toUse whom = 
     sprintf "Try to use %s" whom
+debug 2
 
 //children price 3$per,adults 5$per,print Total Price
 let familyCost child adult =
@@ -32,3 +36,4 @@ let main argv =
     let cost2 = familyCost2 2<Child> 3<Adult>
     printfn $"Total cost={cost2}"
     0 //return an integer exit code
+
