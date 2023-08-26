@@ -15,6 +15,7 @@ let familyCost child adult =
     let result = child * 3 + adult * 5
     result
 
+//eraserable Type
 [<Measure>]type Yuan
 [<Measure>]type Child
 [<Measure>]type Adult
@@ -35,5 +36,10 @@ let main argv =
     printfn $"Total cost={cost}"
     let cost2 = familyCost2 2<Child> 3<Adult>
     printfn $"Total cost={cost2}"
+
+    let cost3 = familyCost 1 2
+    printfn $"Total Cost 3 :{cost3}"
+
     0 //return an integer exit code
+
 
